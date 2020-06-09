@@ -184,7 +184,7 @@ export class {{classname}} {
         {{^isListContainer}}
         if ({{paramName}} !== undefined && {{paramName}} !== null) {
           queryParameters = this.addToHttpParams(queryParameters,
-            <any>{{paramName}}, '{{baseName}}');
+            <any>JSON.stringify({{paramName}}), '{{baseName}}');
         }
         {{/isListContainer}}
 {{/queryParams}}
